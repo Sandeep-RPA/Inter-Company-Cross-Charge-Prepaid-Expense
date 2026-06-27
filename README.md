@@ -1,35 +1,37 @@
 # Inter-Company-Cross-Charge-Prepaid-Expense
-Repository to store UiPath Agent Hackathon use case on Maestro
+This repository houses an automated end-to-end Maestro solution designed to manage, calculate, and process inter-company cross-charges for prepaid expenses. 
 
-#Inter Company Cross Charge :
+## Project Overview
+In corporate accounting, managing shared expenses across multiple legal entities can be highly manual and error-prone. This project automates the entire lifecycle of **Inter-Company Cross-Charges** (where one legal entity charges another for shared goods or services) specifically for **Prepaid Expenses** (future expenses paid for in advance, such as office rent, health insurance, or software subscriptions).
+
+The system integrates robotic process automation (RPA), data fabric schemas, AI agents, and human-in-the-loop validation apps to ensure balanced journal entries are accurately generated and uploaded.
+
+# Inter Company Cross Charge :
 This is an accounting process where one legal entity with in a parent company charges the other entities for shared expenses, Goods , Services.
 
-#Prepaid Expense :
+# Prepaid Expense :
 A Prepaid expense is a future expense that a company pays for in advance. Examples of Prepaid expense can be Office Rent, Health Insurance for employees, Software subscriptions.
 
-#EscalationApp_JEReview.Uis
-This is an Action app created for the review of journal entries
+## UiPath Components :
 
-#EscalationApp_JournalMap.uis
-This is an Action App created for Missing Journal account Mapping entries
+## # Agents : 
+Below are the list of Low-code Agents developed in Studio web.
 
-#HeadCountReport.csv
+* **`Sol_AgentInvoiceReader.uis`**: Extracts data from prepaid expense invoices, transforms it into a structured format, and maps employees to their respective legal entities.
+* **`Sol_FxRateFetcher.uis`**: Fetches real-time foreign exchange rates from Google Finance using RPA. If the RPA process fails, it fallback-searches via a web tool to ensure continuous operation.
+* **`Sol_JEMapChecker.uis`**: Verifies if the involved legal entities have valid account mapping rules configured in the system.
+* **`Sol_JECreator.uis`**: Formats the cross-charge data into balanced journal entries and triggers action tasks for manual review. Once validated, it uploads the journal entries into the central database.
+
+### Maestro Workflow
+* **`SolMaestro_ICOPrepaidExpense.uis`**: The core master orchestrator connecting all AI agents and user review action apps.
+
+### Human-in-the-Loop Action Apps
+* **`EscalationApp_JEReview.uis`**: An Action App for reviewing and approving generated journal entries before final posting.
+* **`EscalationApp_JournalMap.uis`**: An Action App to resolve missing journal account mapping entries.
+
+## Data Fabric Schema
+* **`HeadCountReport.csv`**
 Contains schema of the Head count mapping used in data fabric. This file contains Employee Id and Business unit data
 
-#Journal Entry Sample Schema.csv
+* **`Journal Entry Sample Schema.csv`**
 Contains schema of data fabric entity for Journal Entry
-
-#Solmaestro_ICOPrepaidExpense.uis
-This is a maestro solution connecting all the agents & workflows.
-
-#Sol_AgentInvoiceReader.uis
-Agent to extract the prepaid expense invoice and format the data in the structured format. This agent also maps the employee to its entity
-
-#sol_FxRateFetcher.uis
-Agent to extract the real time exchange rate information from google finance. The Fx rates are fetched first through RPA , if the rpa fails agent makes use of web search tool for the extraction
-
-#Sol_JECreator.uis
-This Agent formats the charges into balanced journal entries and creates Action task for user review. Upon validation journal entries are uploaded into Table
-
-#Sol_JEMapChecker.uis
-This agent checks if the entities have account mapping available in the table
