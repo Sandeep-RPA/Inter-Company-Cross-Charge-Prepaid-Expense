@@ -14,8 +14,8 @@ A Prepaid expense is a future expense that a company pays for in advance. Exampl
 
 ## UiPath Components :
 
-## # Agents : 
-Below are the list of Low-code Agents developed in Studio web.
+### Agents : 
+Below are the list of Low-code Agents developed in Studio web.This Project contains only low-code agents.
 
 * **`Sol_AgentInvoiceReader.uis`**: Extracts data from prepaid expense invoices, transforms it into a structured format, and maps employees to their respective legal entities.
 * **`Sol_FxRateFetcher.uis`**: Fetches real-time foreign exchange rates from Google Finance using RPA. If the RPA process fails, it fallback-searches via a web tool to ensure continuous operation.
@@ -32,9 +32,23 @@ Below are the list of Low-code Agents developed in Studio web.
 ## Data Fabric Schema
 * **`HeadCountReport.csv`**
 Contains schema and data for data fabric entity Head count mapping. This file contains Employee Id and Business unit data
-
 * **`Journal Entry Sample Schema.csv`**
 Contains schema of data fabric entity for Journal Entry
-
 * **`JE Map.csv`**
 Contains Schema and data for data fabric entity JE Map. This file contains Entity and its relevant account code mapping
+
+### Setup Instructions:
+
+* **`Orchestrator setup`**:
+* Create a Folder AgentHack in Default Tenant
+* Add Uipath Datafabric and Gmail integration services in Connections
+
+* **`Data Fabric setup`**:
+* Create Entity Head Count Mapping using the HeadCountReport.csv file in the repo
+* Create Entity JE Map using the JE MAP.csv file in the Repo
+* Create Entity Journal Entry 
+
+
+* **`Studio Web`**:
+* Import all the Agent Solution files(uis) into studio web
+* Fix Connection issues 
