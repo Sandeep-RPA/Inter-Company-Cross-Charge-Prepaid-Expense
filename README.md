@@ -6,10 +6,10 @@ In corporate accounting, managing shared expenses across multiple legal entities
 
 The system integrates robotic process automation (RPA), data fabric schemas, AI agents, and human-in-the-loop validation apps to ensure balanced journal entries are accurately generated and uploaded.
 
-# Inter Company Cross Charge :
+### Inter Company Cross Charge :
 This is an accounting process where one legal entity with in a parent company charges the other entities for shared expenses, Goods , Services.
 
-# Prepaid Expense :
+### Prepaid Expense :
 A Prepaid expense is a future expense that a company pays for in advance. Examples of Prepaid expense can be Office Rent, Health Insurance for employees, Software subscriptions.
 
 ## UiPath Components :
