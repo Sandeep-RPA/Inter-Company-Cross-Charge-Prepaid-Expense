@@ -39,20 +39,20 @@ Contains data for data fabric entity for Journal Entry
 * **`JE Map.csv`**
 Contains sample data for data fabric entity JE Map. This file contains Entity and its relevant account code mapping
 
-# Setup Instructions:
+## Setup Instructions:
 
-## Orchestrator setup
+### Orchestrator setup
 * Create a Folder AgentHackathon in Default Tenant
 * Add Uipath Datafabric,UiPath GenAI Activities and Gmail integration services in Connections.
 * Add a Storage Bucket HeadCountReport and upload the HeadCountReport.csv file
 * Create an Index HeadCountIndex pointing to the above created storage bucket.
 
-## Data Fabric setup
+### Data Fabric setup
 * Import the Data Fabric schema from file DataFabricSchema.json file in the repo
 * Import data in Head Count Mapping entity using the HeadCountReport.csv file in the repo
 * Import data in Entity JE Map using the JE MAP.csv file in the Repo
 
-## Studio Web setup:
+### Studio Web setup:
 * Import all the Agent Solution files(.uis) into studio web.
 * Import all the escalation files(.uis) into studio web.
 * Open the solutions, fix any issues and deploy the solutions to orchestrator.
