@@ -41,7 +41,7 @@ Contains Schema and data for data fabric entity JE Map. This file contains Entit
 
 ## Orchestrator setup
 * Create a Folder AgentHackathon in Default Tenant
-* Add Uipath Datafabric and Gmail integration services in Connections.
+* Add Uipath Datafabric,UiPath GenAI Activities and Gmail integration services in Connections.
 * Add a Storage Bucket HeadCountReport and upload the HeadCountReport.csv file
 * Create an Index HeadCountIndex pointing to the above created storage bucket.
 
@@ -50,8 +50,10 @@ Contains Schema and data for data fabric entity JE Map. This file contains Entit
 * Import data in Head Count Mapping entity using the HeadCountReport.csv file in the repo
 * Import data in Entity JE Map using the JE MAP.csv file in the Repo
 
-## Studio Web:
-* Import all the Agent Solution files(.uis) into studio web
-* Import all the escalation files(.uis) into studio web
-* Fix Connection issues if any and deploy the solution
-* Import the maestro solution files(Solmaestro_ICOPrepaidExpense.uis) 
+## Studio Web setup:
+* Import all the Agent Solution files(.uis) into studio web.
+* Import all the escalation files(.uis) into studio web.
+* Open the solutions, fix any issues and deploy the solutions to orchestrator.
+* Import the maestro solution files(Solmaestro_ICOPrepaidExpense.uis) and fix any connection or agent link issues.
+* Send any of the sample Invoice in the sample prepaid invoice folder to Gamil account with Subject "ICO Prepaid Expense".
+* Debug the solution and deploy the solution.
