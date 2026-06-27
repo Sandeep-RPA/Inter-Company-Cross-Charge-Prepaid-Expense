@@ -30,12 +30,14 @@ Below are the list of Low-code Agents developed in Studio web.This Project conta
 * **`EscalationApp_JournalMap.uis`**: An Action App to resolve missing journal account mapping entries.
 
 ## Data Fabric Schema
+* **`DatafabricSchema.json`**
+Schema of the Data fabric entities.This file can be imported to create entities.
 * **`HeadCountReport.csv`**
-Contains schema and data for data fabric entity Head count mapping. This file contains Employee Id and Business unit data
+Contains data for data fabric entity Head count mapping. This file contains Employee Id and Business unit data
 * **`Journal Entry Sample Schema.csv`**
-Contains schema of data fabric entity for Journal Entry
+Contains data for data fabric entity for Journal Entry
 * **`JE Map.csv`**
-Contains Schema and data for data fabric entity JE Map. This file contains Entity and its relevant account code mapping
+Contains sample data for data fabric entity JE Map. This file contains Entity and its relevant account code mapping
 
 # Setup Instructions:
 
