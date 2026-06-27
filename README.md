@@ -31,7 +31,10 @@ Below are the list of Low-code Agents developed in Studio web.
 
 ## Data Fabric Schema
 * **`HeadCountReport.csv`**
-Contains schema of the Head count mapping used in data fabric. This file contains Employee Id and Business unit data
+Contains schema and data for data fabric entity Head count mapping. This file contains Employee Id and Business unit data
 
 * **`Journal Entry Sample Schema.csv`**
 Contains schema of data fabric entity for Journal Entry
+
+* **`JE Map.csv`**
+Contains Schema and data for data fabric entity JE Map. This file contains Entity and its relevant account code mapping
